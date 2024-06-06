@@ -1,0 +1,49 @@
+uses GraphABC;
+
+procedure DrawCat;
+begin
+  // Тело кота
+  SetBrushColor(clGray);
+  FillEllipse(200, 300, 400, 500);
+  
+  // Голова кота
+  FillEllipse(250, 200, 350, 300);
+  
+  // Уши кота
+  SetBrushColor(clGray);
+  Polygon([(250, 200), (270, 150), (290, 200)]);
+  Polygon([(350, 200), (330, 150), (310, 200)]);
+  
+  // Глаза кота
+  SetBrushColor(clWhite);
+  FillCircle(275, 250, 10);
+  FillCircle(325, 250, 10);
+  
+  SetBrushColor(clBlack);
+  FillCircle(275, 250, 5);
+  FillCircle(325, 250, 5);
+  
+  // Нос кота
+  SetBrushColor(clPink);
+  FillTriangle(300, 270, 290, 290, 310, 290);
+  
+  // Усы кота
+  SetPenColor(clBlack);
+  Line(290, 290, 250, 280);
+  Line(290, 290, 250, 290);
+  Line(290, 290, 250, 300);
+  
+  Line(310, 290, 350, 280);
+  Line(310, 290, 350, 290);
+  Line(310, 290, 350, 300);
+  
+  // Хвост кота
+  SetPenWidth(10);
+  Line(400, 400, 450, 350);
+end;
+
+begin
+  SetWindowSize(600, 600);
+  ClearWindow(clWhite);
+  DrawCat;
+end.
